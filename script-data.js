@@ -1,0 +1,23 @@
+export default [
+    "assets/cacao_and_coffee_shop.gif",
+    "coffeerain.gif",
+    "draftpink.gif",
+    "droidcrime.gif",
+    "exodus.gif",
+    "familydinner.gif",
+    "flower_shop.gif",
+    "future.gif",
+    "girlinrain.gif",
+    "highfloor.gif",
+    "highlands.gif",
+    "highsoceity.gif",
+    "lowlands.gif",
+    "lullaby.gif",
+    "midnight_melancholy.gif",
+    "nighttrain.gif",
+    "player2.gif",
+    "sideshop.gif",
+    "skate.gif",
+    "sushi.gif",
+];
+  

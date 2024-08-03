@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Lofi Player</title>
+</head>
+<body>
+    
+    <div id="clock-contianer" style="display: flex; justify-content: center; align-items: center; height: 100vh; width: 100%; position: absolute; left: 1%; ">
+        <div id="clock">00:00:00</div>
+    </div>
+
+    
+    <div id="gifContainer">
+        <img id="gif">
+    </div>
+    
+    <div id="youtube-audio" data-autoplay="0" data-loop="0">
+        <!-- The icon and player will be added dynamically -->
+    </div>
+
+    <script src="player.js"></script>
+    <script src="script.js"></script>
+    <script src="time.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+</body>
+</html>
