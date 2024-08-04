@@ -1,13 +1,12 @@
 @font-face {
-  font-family: "Hardpixel";
-  src: url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.eot"); /* IE9 */
-  src: url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-       url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.woff2") format("woff2"), /* Modern Browsers */
-       url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.woff") format("woff"), /* Modern Browsers */
-       url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.ttf") format("truetype"), /* Safari, Android, iOS */
-       url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.svg#Hardpixel") format("svg"); /* Legacy iOS */
+    font-family: "Hardpixel";
+    src: url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.eot"); /* IE9 */
+    src: url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+         url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.woff2") format("woff2"), /* Modern Browsers */
+         url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.woff") format("woff"), /* Modern Browsers */
+         url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.ttf") format("truetype"), /* Safari, Android, iOS */
+         url("https://db.onlinewebfonts.com/t/46ed1daa8d58529ffb76987f884f2b03.svg#Hardpixel") format("svg"); /* Legacy iOS */
 }
-
 
 * {
     box-sizing: border-box;
@@ -39,12 +38,13 @@ body, html {
 
 #clock {
     z-index: 1;
-    opacity: calc(80%);
+    opacity: 0.8;
     width: max(30vw, 300px);
     letter-spacing: 5px; 
     font-size: max(7vw, 60px);
     text-shadow: 5px 5px 0px #020406;
     filter: brightness(90%);
+    color: white;
 }
 
 #youtube-audio {
@@ -52,13 +52,12 @@ body, html {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 65%;
-    left: 49%;
+    top: 60%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     text-shadow: 5px 5px 0px #020406;
     filter: brightness(75%);
-    
 }
 
 #gifContainer {
@@ -83,16 +82,97 @@ body, html {
     position: relative;
 }
 
-
 @keyframes playGif {
     0% {
-        filter: brightness(35%);
+        filter: brightness(40%);
     }
     50% {
-        filter: brightness(60%);
+        filter: brightness(70%);
     }
     100% {
-        filter: brightness(35%);
+        filter: brightness(40%);
     }
 }
 
+.buttons-wrapper {
+    margin: 1rem 0;
+    display: flex;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    padding-top: 4rem;
+}
+
+.button-container {
+    padding: 8px;
+}
+
+.dot {
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    box-shadow: 5px 5px 0px #020406;
+    opacity: 0.9;
+}
+
+.button {
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
+.button-play.paused .dot-1 {
+    top: 0;
+    left: 0;
+    height: 20px;
+}
+
+.button-play.paused .dot-2 {
+    top: 5px;
+    left: 5px;
+    height: 10px;
+}
+
+.button-play.paused .dot-3 {
+    top: 10px;
+    left: 10px;
+}
+
+.button-play.paused .dot-4 {
+    top: 15px;
+    left: 5px;
+}
+
+.button-play.paused .dot-5 {
+    top: 20px;
+    left: 0px;
+}
+
+.button-play.playing .dot-1 {
+    top: 0;
+    left: 0;
+    height: 20px;
+}
+
+.button-play.playing .dot-2 {
+    top: 0;
+    left: 10px;
+    height: 10px;
+}
+
+.button-play.playing .dot-3 {
+    top: 10px;
+    left: 10px;
+}
+
+.button-play.playing .dot-4 {
+    top: 15px;
+    left: 10px;
+    height: 10px;
+}
+
+.button-play.playing .dot-5 {
+    top: 20px;
+    left: 0px;
+}
