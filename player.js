@@ -1,21 +1,19 @@
 function onYouTubeIframeAPIReady() {
     const ctrlq = document.getElementById("youtube-audio");
-    const icon = document.createElement("i");
-    icon.setAttribute("id", "youtube-icon");
-    icon.className = "fa-solid fa-play";
-    icon.style.cssText = "cursor: pointer; font-size: 2em;";
-    ctrlq.appendChild(icon);
-
-    const div = document.createElement("div");
-    div.setAttribute("id", "youtube-player");
-    ctrlq.appendChild(div);
+    const buttonPlay = document.querySelector(".button-play");
 
     let player;
     let playlist;
     let currentVideoIndex = 0;
 
     const toggleButton = (play) => {
-        icon.className = play ? "fa-solid fa-pause" : "fa-solid fa-play";
+        if (play) {
+            buttonPlay.classList.remove("paused");
+            buttonPlay.classList.add("playing");
+        } else {
+            buttonPlay.classList.remove("playing");
+            buttonPlay.classList.add("paused");
+        }
     };
 
     ctrlq.onclick = () => {
